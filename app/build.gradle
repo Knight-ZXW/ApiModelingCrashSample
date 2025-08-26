@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -9,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.knightboost.apimodelingtest"
-        minSdk 16
+        minSdk 21
         targetSdk 36
         versionCode 1
         versionName "1.0"
@@ -19,7 +18,7 @@ android {
 
     buildTypes {
         debug{
-            debuggable false
+            debuggable true
             minifyEnabled true
         }
         release {
@@ -30,9 +29,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = '11'
     }
 
 }
